@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -268,13 +268,23 @@
 
         /* Section Styles */
         section {
-            padding: 5rem 0;
+            padding: 6rem 0;
+        }
+        
+        section:first-of-type {
+            padding-top: 5rem;
+        }
+        
+        #skills,
+        #projects,
+        #experience {
+            padding-top: 8rem;
         }
 
         .section-title {
             font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             position: relative;
         }
 
@@ -387,7 +397,7 @@
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         .cert-card {
@@ -562,10 +572,10 @@
     <section class="hero">
         <div class="hero-content">
             <div class="profile-image-container">
-                <img src="profile.png" alt="Insaf Ahamedh" class="profile-image" id="profileImg">
+                <img src="profile3.png" alt="Insaf Ahamedh" class="profile-image" id="profileImg">
                 <div class="online-status"></div>
             </div>
-            <h1 class="hero-title">Insaf Ahamedh</h1>
+            <h1 class="hero-title">Insaf Ahmedh</h1>
             <p class="hero-subtitle">Backend & DevOps Engineer</p>
             <p class="hero-description">
                 Building reliable backend systems and production-ready delivery pipelines.
@@ -777,6 +787,28 @@
                     AWS core services, scalability, high availability, and architecture fundamentals
                 </p>
                 <a href="https://www.udemy.com/certificate/UC-6f5c0148-9018-4182-9080-02b8e011be10/" target="_blank" class="cert-link">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-platform">KodeKloud</div>
+                <h3 class="cert-title">Crash Course: AI-Powered DevOps</h3>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                    Production DevOps, cloud security automation, RAG systems, Kubernetes incident response, MCP-driven AWS automation, and agentic workflows for Docker and Terraform
+                </p>
+                <a href="https://learn.kodekloud.com/user/certificate/33e6178e-a5b4-4569-828c-9387d231273f" target="_blank" class="cert-link">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-platform">LinkedIn Learning</div>
+                <h3 class="cert-title">Docker for Developers</h3>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">
+                    Docker fundamentals, containerization, Docker Compose, Docker Swarm, Kubernetes clusters, and CI/CD with Docker
+                </p>
+                <a href="https://www.linkedin.com/learning/certificates/347e430a9557c72bce8a106820358f0ba3de6e1f11d466babe5aaad3787f6c88" target="_blank" class="cert-link">
                     View Certificate <i class="fas fa-external-link-alt"></i>
                 </a>
             </div>
