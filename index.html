@@ -134,41 +134,36 @@
         }
 
         .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 6rem;
-            max-width: 1200px;
-            width: 100%;
+            text-align: center;
             animation: fadeInUp 1s;
         }
 
         .profile-image-container {
             position: relative;
-            width: 350px;
-            height: 350px;
-            flex-shrink: 0;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
         }
 
         .profile-image {
-            width: 350px;
-            height: 350px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            border: 6px solid var(--primary);
+            border: 4px solid var(--primary);
             object-fit: cover;
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
             animation: fadeInUp 1s;
         }
 
         .online-status {
             position: absolute;
-            bottom: 25px;
-            right: 25px;
-            width: 45px;
-            height: 45px;
+            bottom: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
             background: var(--accent);
             border-radius: 50%;
-            border: 6px solid var(--dark);
+            border: 4px solid var(--dark);
             animation: pulse 2s infinite;
         }
 
@@ -177,50 +172,37 @@
                 box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
             }
             50% {
-                box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
             }
         }
 
-        .hero-text {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
         .hero-title {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, #fff, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            line-height: 1.1;
         }
 
         .hero-subtitle {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--gray);
             margin-bottom: 2rem;
         }
 
-        .hero-links {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
         .hero-description {
-            font-size: 1.05rem;
-            max-width: 550px;
-            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
             color: #94a3b8;
-            line-height: 1.8;
-            display: none;
         }
 
         .cta-buttons {
-            display: none;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -261,6 +243,8 @@
         .social-links {
             display: flex;
             gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
         }
 
         .social-links a {
@@ -274,54 +258,12 @@
             color: var(--primary);
             font-size: 1.2rem;
             transition: all 0.3s;
-            text-decoration: none;
         }
 
         .social-links a:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-5px);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .hero-btn {
-            padding: 0.9rem 2.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.7rem;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hero-btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-        }
-
-        .hero-btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        .hero-btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .hero-btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-2px);
         }
 
         /* Section Styles */
@@ -336,7 +278,7 @@
         #skills,
         #projects,
         #experience {
-            padding-top: 8rem;
+            padding-top: 4rem;
         }
 
         .section-title {
@@ -591,44 +533,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 2rem;
-            }
-            
-            .hero-text {
-                text-align: center;
-                align-items: center;
-            }
-            
-            .hero-links {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            
-            .profile-image-container {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .profile-image {
-                width: 250px;
-                height: 250px;
-            }
-            
-            .online-status {
-                bottom: 20px;
-                right: 20px;
-                width: 40px;
-                height: 40px;
-            }
-            
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -636,8 +540,6 @@
             .hero-subtitle {
                 font-size: 1.2rem;
             }
-            
-
 
             .nav-links {
                 display: none;
@@ -670,7 +572,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="profile-image-container">
-                <img src="profile4.png" alt="Insaf Ahamedh" class="profile-image" id="profileImg">
+                <img src="profile4.png" alt="Insaf Ahmedh" class="profile-image" id="profileImg">
                 <div class="online-status"></div>
             </div>
             <h1 class="hero-title">Insaf Ahmedh</h1>
