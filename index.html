@@ -1,414 +1,792 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insaf Ahamad | Software Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #030712;
-            --glass: rgba(17, 24, 39, 0.7);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --primary: #6366f1; /* Indigo */
-            --secondary: #a855f7; /* Purple */
-            --accent: #22d3ee; /* Cyan */
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #22d3ee 100%);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inshaf (Insaf) Ahamad — Software Engineer (Backend / DevOps)</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-        /* Animated Mesh Background */
-        .mesh-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: 
-                radial-gradient(circle at 0% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 35%),
-                radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.15) 0%, transparent 35%),
-                radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.05) 0%, transparent 50%);
-        }
+  <style>
+    :root{
+      --bg0: #0b1220;
+      --bg1: #0f172a;
+      --card: rgba(17, 24, 39, 0.72);
+      --card2: rgba(15, 23, 42, 0.82);
+      --border: rgba(148, 163, 184, 0.14);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --muted2:#64748b;
+      --brand: #22d3ee;
+      --brand2:#60a5fa;
+      --good:#34d399;
+      --warn:#fbbf24;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --grad: radial-gradient(1200px 600px at 15% 10%, rgba(96,165,250,.18), transparent 55%),
+              radial-gradient(1000px 700px at 85% 30%, rgba(34,211,238,.16), transparent 55%),
+              radial-gradient(900px 500px at 50% 90%, rgba(52,211,153,.12), transparent 55%),
+              linear-gradient(180deg, #070b14 0%, #0b1220 60%, #070b14 100%);
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html, body { height:100%; }
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      background: var(--grad);
+      overflow-x:hidden;
+    }
 
-        /* Navbar */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--glass-border);
-            background: rgba(3, 7, 18, 0.8);
-        }
+    /* Background grain + glow */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(34,211,238,.10) 0%, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(96,165,250,.10) 0%, transparent 55%),
+        radial-gradient(circle at 50% 50%, rgba(52,211,153,.08) 0%, transparent 55%);
+      pointer-events:none;
+      z-index:-2;
+    }
+    body::after{
+      content:"";
+      position:fixed; inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+      opacity:.35;
+      mix-blend-mode:overlay;
+      pointer-events:none;
+      z-index:-1;
+    }
 
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.25rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .container{
+      max-width: 1120px;
+      margin:0 auto;
+      padding: 0 22px;
+    }
 
-        .logo {
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: -1px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    /* Nav */
+    nav{
+      position:fixed; top:0; left:0; right:0;
+      z-index:1000;
+      background: rgba(7,11,20, .70);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 22px;
+      max-width:1120px;
+      margin:0 auto;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .brand-badge{
+      width:34px; height:34px;
+      border-radius: 12px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(34,211,238,.22), rgba(96,165,250,.22));
+      border:1px solid rgba(34,211,238,.18);
+      box-shadow: 0 10px 30px rgba(34,211,238,.12);
+    }
+    .brand span{
+      background: linear-gradient(135deg, #fff, #c7d2fe);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      font-size: 16px;
+    }
+    .nav-links{
+      display:flex;
+      gap: 6px;
+      list-style:none;
+      align-items:center;
+    }
+    .nav-links a{
+      color: var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      padding: 9px 12px;
+      border-radius: 12px;
+      transition: .2s ease;
+      font-size: 14px;
+    }
+    .nav-links a:hover{
+      color: var(--text);
+      background: rgba(148,163,184,.08);
+      transform: translateY(-1px);
+    }
+    .nav-cta{
+      display:flex; gap:10px; align-items:center;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,.18);
+      color: var(--text);
+      text-decoration:none;
+      font-weight:700;
+      font-size: 14px;
+      background: rgba(15,23,42,.55);
+      transition: .2s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-primary{
+      border: 1px solid rgba(34,211,238,.26);
+      background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(96,165,250,.14));
+    }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+    /* Hero */
+    header{
+      padding-top: 92px;
+      padding-bottom: 34px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: center;
+      padding: 28px 0 10px 0;
+    }
+    .hero h1{
+      font-size: clamp(34px, 4.6vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.9px;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 55%, #93c5fd 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+    .role{
+      display:inline-flex; gap:10px; align-items:center;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(34,211,238,.20);
+      background: rgba(34,211,238,.08);
+      color: #a5f3fc;
+      font-weight: 800;
+      font-size: 13px;
+      width: fit-content;
+    }
+    .hero p{
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 64ch;
+      margin-bottom: 18px;
+    }
+    .chips{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin: 14px 0 20px 0;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center; gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,.16);
+      background: rgba(15,23,42,.55);
+      color: #cbd5e1;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .chip i{ color: var(--brand); }
 
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+    .hero-card{
+      border-radius: var(--radius2);
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position: relative;
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(400px 200px at 30% 10%, rgba(34,211,238,.22), transparent 55%),
+                  radial-gradient(420px 240px at 80% 80%, rgba(96,165,250,.18), transparent 55%);
+      pointer-events:none;
+    }
+    .avatar{
+      position:relative;
+      border-radius: 22px;
+      border:1px solid rgba(148,163,184,.18);
+      background: rgba(15,23,42,.8);
+      padding: 18px;
+    }
+    .avatar-top{
+      display:flex; justify-content:space-between; align-items:center;
+      margin-bottom: 12px;
+    }
+    .tag{
+      font-size: 12px;
+      color: #a5b4fc;
+      font-weight: 800;
+      background: rgba(99,102,241,.12);
+      border: 1px solid rgba(99,102,241,.18);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .pulse{
+      width:10px; height:10px; border-radius:50%;
+      background: var(--good);
+      box-shadow: 0 0 0 0 rgba(52,211,153,.55);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse{
+      0%{ box-shadow: 0 0 0 0 rgba(52,211,153,.55); }
+      70%{ box-shadow: 0 0 0 12px rgba(52,211,153,0); }
+      100%{ box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+    }
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+    .avatar-main{
+      display:grid;
+      place-items:center;
+      padding: 28px 14px;
+    }
+    .avatar-icon{
+      width: 120px; height: 120px;
+      border-radius: 28px;
+      display:grid; place-items:center;
+      background: linear-gradient(135deg, rgba(34,211,238,.18), rgba(96,165,250,.12));
+      border:1px solid rgba(34,211,238,.20);
+      font-size: 46px;
+      color: #e2e8f0;
+    }
+    .avatar-meta{
+      margin-top: 14px;
+      text-align:center;
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .social{
+      display:flex;
+      gap: 10px;
+      justify-content:center;
+      margin-top: 14px;
+    }
+    .social a{
+      width: 46px; height: 46px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      text-decoration:none;
+      color: var(--text);
+      background: rgba(15,23,42,.70);
+      border: 1px solid rgba(148,163,184,.18);
+      transition: .2s ease;
+    }
+    .social a:hover{
+      transform: translateY(-2px);
+      border-color: rgba(34,211,238,.28);
+      box-shadow: 0 18px 40px rgba(34,211,238,.10);
+    }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+    /* Sections */
+    section{
+      padding: 44px 0;
+    }
+    .section-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .section-title h2{
+      font-size: 22px;
+      letter-spacing: -0.2px;
+    }
+    .section-title p{
+      color: var(--muted2);
+      font-size: 14px;
+      max-width: 70ch;
+    }
 
-        .hero-badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 99px;
-            color: var(--primary);
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
+    .grid{
+      display:grid;
+      gap: 14px;
+    }
+    .grid-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -2px;
-        }
+    .card{
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 14px 40px rgba(0,0,0,.25);
+    }
+    .card h3{
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .card p, .card li{
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .list{
+      list-style:none;
+      display:grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .list li{
+      position:relative;
+      padding-left: 18px;
+    }
+    .list li::before{
+      content:"▸";
+      position:absolute;
+      left:0;
+      top:0;
+      color: var(--brand);
+      font-weight: 900;
+    }
 
-        .hero h1 span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .kpis{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .kpi{
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,.14);
+      background: rgba(15,23,42,.50);
+    }
+    .kpi b{
+      font-size: 18px;
+    }
+    .kpi span{
+      display:block;
+      margin-top: 6px;
+      color: var(--muted2);
+      font-size: 12px;
+      font-weight: 650;
+    }
 
-        .hero p {
-            color: var(--text-dim);
-            font-size: 1.2rem;
-            max-width: 650px;
-            margin: 0 auto 2rem;
-        }
+    /* Projects */
+    .projects{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .project{
+      background: rgba(17,24,39,.62);
+      border:1px solid rgba(148,163,184,.14);
+      border-radius: var(--radius);
+      padding: 16px;
+      transition: .2s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .project::before{
+      content:"";
+      position:absolute;
+      left:0; top:0;
+      height:4px;
+      width:100%;
+      background: linear-gradient(90deg, rgba(34,211,238,.9), rgba(96,165,250,.9), rgba(52,211,153,.9));
+      opacity:.65;
+    }
+    .project:hover{
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: rgba(34,211,238,.22);
+    }
+    .project h3{
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-size: 15px;
+    }
+    .project .meta{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin: 10px 0 12px 0;
+    }
+    .pill{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,.14);
+      background: rgba(15,23,42,.55);
+      color: #cbd5e1;
+      font-weight: 700;
+    }
+    .project a{
+      color: #a5f3fc;
+      text-decoration:none;
+      font-weight: 800;
+      font-size: 13px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-right: 10px;
+    }
+    .project a:hover{ text-decoration: underline; }
 
-        /* Glass Cards */
-        .glass-card {
-            background: var(--glass);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 2.5rem;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+    /* Footer */
+    footer{
+      padding: 40px 0 60px 0;
+      color: var(--muted2);
+      font-size: 13px;
+      text-align:center;
+    }
 
-        .glass-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(99, 102, 241, 0.4);
-        }
-
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            border: 1px solid transparent;
-        }
-
-        .skill-item i {
-            color: var(--accent);
-            font-size: 1.5rem;
-        }
-
-        /* Experience */
-        .timeline {
-            margin-top: 4rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .company-tag {
-            background: var(--gradient);
-            padding: 0.2rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .exp-list {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .exp-list li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
-
-        .exp-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 6px;
-            height: 6px;
-            background: var(--primary);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--primary);
-        }
-
-        /* Contact Section */
-        .contact-box {
-            text-align: center;
-            padding: 5rem 0;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            color: white;
-            margin: 0 0.5rem;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-
-        .social-btn:hover {
-            background: var(--primary);
-            transform: scale(1.1);
-        }
-
-        section { padding: 8rem 0; }
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 3rem; }
-            .exp-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-        }
-    </style>
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid-3{ grid-template-columns: 1fr; }
+      .grid-2{ grid-template-columns: 1fr; }
+      .projects{ grid-template-columns: 1fr; }
+      .nav-links{ display:none; }
+    }
+  </style>
 </head>
+
 <body>
+  <nav>
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="brand-badge"><i class="fa-solid fa-code"></i></div>
+        <span>Inshaf (Insaf) Ahamad</span>
+      </div>
 
-    <div class="mesh-bg"></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-    <nav>
-        <div class="nav-content">
-            <div class="logo">INSAF.IO</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+      <div class="nav-cta">
+        <a class="btn" href="https://github.com/Inscode" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a class="btn btn-primary" href="#contact">
+          <i class="fa-solid fa-paper-plane"></i> Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container" id="home">
+    <div class="hero">
+      <div>
+        <div class="role"><i class="fa-solid fa-layer-group"></i> Software Engineer (Backend / DevOps)</div>
+        <h1>Building reliable backend systems<br/>and smooth delivery pipelines.</h1>
+        <p>
+          I design and build <b>REST APIs</b> and backend services using <b>Java (Spring Boot)</b> and
+          <b>Python (Flask/FastAPI)</b>, optimize <b>PostgreSQL/MySQL</b>, and ship production releases with
+          <b>Docker</b>, <b>CI/CD</b>, and <b>Kubernetes</b>. Comfortable in Agile teams, code reviews, and owning deployments end-to-end.
+        </p>
+
+        <div class="chips">
+          <div class="chip"><i class="fa-solid fa-gears"></i> Spring Boot</div>
+          <div class="chip"><i class="fa-brands fa-python"></i> Flask/FastAPI</div>
+          <div class="chip"><i class="fa-solid fa-database"></i> Postgres/MySQL</div>
+          <div class="chip"><i class="fa-brands fa-docker"></i> Docker</div>
+          <div class="chip"><i class="fa-solid fa-diagram-project"></i> CI/CD</div>
+          <div class="chip"><i class="fa-brands fa-aws"></i> AWS & DigitalOcean</div>
         </div>
-    </nav>
 
-    <main class="container">
-        <section id="home" class="hero">
-            <div>
-                <div class="hero-badge">Available for new opportunities</div>
-                <h1>Hi, I'm <span>Insaf Ahamad</span></h1>
-                <p>Software Engineer (Backend / DevOps)</p>
-                <div class="hero-cta">
-                    <a href="#experience" class="glass-card" style="padding: 1rem 2rem; text-decoration: none; color: white; border-radius: 99px; background: var(--primary);">View My Work</a>
-                </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="mailto:inshafahmedh@gmail.com">
+            <i class="fa-solid fa-envelope"></i> inshafahmedh@gmail.com
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/insaf-ahmedh/" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><b>Backend</b><span>REST APIs, Auth, DB tuning</span></div>
+          <div class="kpi"><b>Delivery</b><span>CI/CD, GitOps, Docker</span></div>
+          <div class="kpi"><b>Cloud</b><span>AWS, DigitalOcean, Linux</span></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="avatar">
+          <div class="avatar-top">
+            <div class="tag">Colombo, Sri Lanka</div>
+            <div class="pulse" title="Open to opportunities"></div>
+          </div>
+
+          <div class="avatar-main">
+            <div class="avatar-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+            <div class="avatar-meta">
+              <b>Backend + DevOps</b> focus<br/>
+              Java • Python • Cloud • Kubernetes
             </div>
-        </section>
 
-        <section id="about">
-            <div class="glass-card">
-                <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">The Architecture of my Passion</h2>
-                <p style="color: var(--text-dim); font-size: 1.1rem;">
-                    Based in Colombo, Sri Lanka, I bridge the gap between robust backend development and seamless cloud operations. I specialize in building highly available systems using **Java Spring Boot**, **FastAPI**, and **Node.js**, while ensuring they scale infinitely via **Kubernetes** and **AWS**. 
-                </p>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/insaf-ahmedh/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Inscode" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="mailto:inshafahmedh@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="tel:+94769025444" aria-label="Phone">
+                <i class="fa-solid fa-phone"></i>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
 
-        <section id="experience">
-            <h2 class="section-title">Professional Journey</h2>
-            <div class="timeline">
-                
-                <div class="glass-card">
-                    <div class="exp-header">
-                        <div>
-                            <span class="company-tag">Current</span>
-                            <h3 style="font-size: 1.5rem; margin-top: 0.5rem;">Software Engineer (DevOps Focus)</h3>
-                            <p style="color: var(--primary); font-weight: 600;">Aasait Solutions</p>
-                        </div>
-                        <div style="color: var(--text-dim); font-size: 0.9rem;">Dec 2024 — Present</div>
-                    </div>
-                    
-                    <ul class="exp-list">
-                        <li>Designed and deployed scalable web applications using <strong>Python (Flask/FastAPI)</strong> and <strong>Java Spring Boot</strong> following SOLID principles.</li>
-                        <li>Built full-stack features using <strong>React (Vite)</strong> integrated with high-performance NestJS and Express backends.</li>
-                        <li>Optimized <strong>PostgreSQL</strong> schemas and managed containerized environments with Docker for maximum database performance.</li>
-                        <li>Architected robust <strong>RESTful APIs</strong> featuring JWT security, rate limiting, and structured error handling.</li>
-                        <li>Engineered CI/CD pipelines via <strong>Jenkins & GitHub Actions</strong> with SonarQube quality enforcement.</li>
-                        <li>Managed cloud infrastructure on <strong>AWS & DigitalOcean</strong>, optimizing Linux server resources for 99.9% uptime.</li>
-                        <li>Led troubleshooting for complex concurrency bugs and database bottlenecks, significantly stabilizing production systems.</li>
-                    </ul>
-                </div>
+    </div>
+  </header>
 
-                <div class="glass-card" style="opacity: 0.8;">
-                    <div class="exp-header">
-                        <div>
-                            <h3 style="font-size: 1.2rem;">BSc in Computer Science</h3>
-                            <p style="color: var(--text-dim);">University of Colombo School of Computing</p>
-                        </div>
-                    </div>
-                </div>
+  <main class="container">
+    <!-- About -->
+    <section id="about">
+      <div class="section-title">
+        <div>
+          <h2>About</h2>
+          <p>
+            I enjoy building backend systems that are easy to maintain, fast under load, and safe in production —
+            from API design and database optimization to automated deployments and observability.
+          </p>
+        </div>
+      </div>
 
-            </div>
-        </section>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3><i class="fa-solid fa-bolt" style="color:var(--brand)"></i> What I do best</h3>
+          <ul class="list">
+            <li>Design REST APIs with clean architecture, DI, versioning, and structured error handling</li>
+            <li>Database schema design and SQL optimization (indexes, query tuning)</li>
+            <li>Secure auth using JWT / OAuth2 patterns and best practices</li>
+            <li>Ship reliably with CI/CD, Docker, GitOps, and Kubernetes exposure</li>
+          </ul>
+        </div>
 
-        <section id="skills">
-            <h2 class="section-title">Technical Arsenal</h2>
-            <div class="skills-grid">
-                <div class="glass-card">
-                    <h3 style="margin-bottom: 1.5rem; color: var(--accent);"><i class="fas fa-server"></i> Backend</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <span class="hero-badge">Java Spring Boot</span>
-                        <span class="hero-badge">Python FastAPI/Flask</span>
-                        <span class="hero-badge">Node.js / NestJS</span>
-                        <span class="hero-badge">PostgreSQL</span>
-                    </div>
-                </div>
-                <div class="glass-card">
-                    <h3 style="margin-bottom: 1.5rem; color: var(--secondary);"><i class="fas fa-infinity"></i> DevOps</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <span class="hero-badge">Kubernetes (EKS)</span>
-                        <span class="hero-badge">Docker</span>
-                        <span class="hero-badge">Terraform</span>
-                        <span class="hero-badge">GitHub Actions</span>
-                        <span class="hero-badge">ArgoCD</span>
-                    </div>
-                </div>
-                <div class="glass-card">
-                    <h3 style="margin-bottom: 1.5rem; color: var(--primary);"><i class="fas fa-cloud"></i> Cloud</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <span class="hero-badge">AWS (VPC, IAM, Lambda)</span>
-                        <span class="hero-badge">DigitalOcean</span>
-                        <span class="hero-badge">Nginx</span>
-                        <span class="hero-badge">Linux Administration</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="card">
+          <h3><i class="fa-solid fa-compass" style="color:var(--brand2)"></i> Current focus</h3>
+          <ul class="list">
+            <li>Improving Kubernetes confidence (deployments, services, ingress, troubleshooting)</li>
+            <li>Writing better tests (unit + integration) and enforcing quality gates</li>
+            <li>Observability: logging, metrics, and alerting for production systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <section id="contact" class="contact-box">
-            <h2 class="section-title">Let's Build Something Great</h2>
-            <p style="color: var(--text-dim); margin-bottom: 2rem;">I'm currently looking for new engineering challenges.</p>
-            <div style="margin-bottom: 3rem;">
-                <a href="mailto:inshafahmedh@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/Inscode" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/insaf-ahmedh/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p style="font-size: 0.8rem; color: var(--text-dim);">© 2026 Insaf Ahamad. Built for Performance.</p>
-        </section>
-    </main>
+    <!-- Stack -->
+    <section id="stack">
+      <div class="section-title">
+        <div>
+          <h2>Tech stack</h2>
+          <p>Backend-first with practical DevOps — the tools I use to build, ship, and run software.</p>
+        </div>
+      </div>
 
-    <script>
-        // Simple reveal animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-                }
-            });
-        }, { threshold: 0.1 });
+      <div class="grid grid-3">
+        <div class="card">
+          <h3><i class="fa-solid fa-code" style="color:var(--brand)"></i> Backend</h3>
+          <ul class="list">
+            <li>Java: Spring Boot (REST, DI, clean architecture)</li>
+            <li>Python: Flask / FastAPI</li>
+            <li>Node.js exposure (NestJS / Express)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-database" style="color:var(--brand2)"></i> Data</h3>
+          <ul class="list">
+            <li>PostgreSQL, MySQL (schema, indexing, tuning)</li>
+            <li>MongoDB exposure</li>
+            <li>Redis/caching patterns (if applicable)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-cloud" style="color:var(--good)"></i> DevOps / Cloud</h3>
+          <ul class="list">
+            <li>Docker, CI/CD (Jenkins, GitHub Actions)</li>
+            <li>ArgoCD / GitOps exposure</li>
+            <li>Kubernetes exposure; Linux servers</li>
+            <li>AWS & DigitalOcean</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.style.opacity = "0";
-            card.style.transform = "translateY(30px)";
-            card.style.transition = "all 0.6s ease-out";
-            observer.observe(card);
-        });
-    </script>
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-title">
+        <div>
+          <h2>Experience</h2>
+          <p>Real-world delivery: backend development + deployments + production troubleshooting.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Aasa IT Solutions — Software Engineer (DevOps Focus)</h3>
+        <p style="margin-top:4px;color:var(--muted2);font-weight:700;">Dec 2024 – Dec 2025 · Dehiwala (Hybrid)</p>
+        <ul class="list" style="margin-top:12px;">
+          <li>Built backend services and REST APIs using <b>Spring Boot</b> and <b>Flask/FastAPI</b> with secure authentication and clean architecture</li>
+          <li>Optimized <b>PostgreSQL/MySQL</b> schemas and queries with indexing and performance tuning</li>
+          <li>Automated delivery with <b>Jenkins</b>, <b>GitHub Actions</b> and Git-based workflows; supported deployment automation and quality checks</li>
+          <li>Containerized services using <b>Docker</b> and supported deployments on <b>Linux cloud servers</b> (AWS / DigitalOcean)</li>
+          <li>Worked in Agile/Scrum with code reviews, sprint planning, and team collaboration</li>
+          <li>Contributed to identity-related backend integrations (MOSIP workflows / VC issuance) where applicable</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-title">
+        <div>
+          <h2>Projects</h2>
+          <p>
+            Highlighted work + GitHub. Replace the featured projects below, or enable auto-loading from your GitHub repos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Featured (manual) projects -->
+      <div class="projects" id="featuredProjects">
+        <div class="project">
+          <h3>Project 1 — Backend API (Spring Boot)</h3>
+          <p>Scalable REST API with auth, validation, and clean architecture patterns.</p>
+          <div class="meta">
+            <span class="pill">Spring Boot</span><span class="pill">PostgreSQL</span><span class="pill">JWT</span>
+          </div>
+          <a href="https://github.com/Inscode" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> Repo</a>
+          <a href="#" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+        </div>
+
+        <div class="project">
+          <h3>Project 2 — Flask/FastAPI Service</h3>
+          <p>Python backend service with structured error handling, logging, and REST endpoints.</p>
+          <div class="meta">
+            <span class="pill">Flask/FastAPI</span><span class="pill">Docker</span><span class="pill">CI/CD</span>
+          </div>
+          <a href="https://github.com/Inscode" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> Repo</a>
+          <a href="#" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+        </div>
+
+        <div class="project">
+          <h3>Project 3 — Deployment / GitOps</h3>
+          <p>Containerized app deployment workflows with CI pipelines and GitOps-style releases.</p>
+          <div class="meta">
+            <span class="pill">Docker</span><span class="pill">Kubernetes</span><span class="pill">ArgoCD</span>
+          </div>
+          <a href="https://github.com/Inscode" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> Repo</a>
+          <a href="#" target="_blank" rel="noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+        </div>
+      </div>
+
+      <!-- Auto GitHub repos -->
+      <div class="card" style="margin-top:14px;">
+        <h3><i class="fa-brands fa-github" style="color:var(--brand)"></i> Latest from GitHub (auto)</h3>
+        <p>Enable this to show your latest public repositories from GitHub automatically.</p>
+        <ul class="list" id="githubRepos" style="margin-top:12px;"></ul>
+        <p style="margin-top:10px;color:var(--muted2);font-size:12px;">
+          Tip: Update <b>GITHUB_USERNAME</b> in the script to your GitHub username.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-title">
+        <div>
+          <h2>Contact</h2>
+          <p>Want to collaborate or hire? Email is best — I reply quickly.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3><i class="fa-solid fa-envelope" style="color:var(--brand)"></i> Email</h3>
+          <p><a href="mailto:inshafahmedh@gmail.com" style="color:#a5f3fc;text-decoration:none;font-weight:800;">inshafahmedh@gmail.com</a></p>
+          <p style="margin-top:8px;">Preferred for job opportunities and collaborations.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-brands fa-linkedin" style="color:var(--brand2)"></i> LinkedIn</h3>
+          <p><a href="https://www.linkedin.com/in/insaf-ahmedh/" target="_blank" rel="noreferrer" style="color:#a5f3fc;text-decoration:none;font-weight:800;">linkedin.com/in/insaf-ahmedh</a></p>
+          <p style="margin-top:8px;">Connect + message after applying.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Inshaf (Insaf) Ahamad · Software Engineer (Backend / DevOps)
+    </footer>
+  </main>
+
+  <script>
+    // Smooth scroll (for when nav links are visible)
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        const target = document.querySelector(id);
+        if(!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto-load GitHub repos (public)
+    // IMPORTANT: set this to your GitHub username
+    const GITHUB_USERNAME = "Inscode";
+
+    async function loadGithubRepos() {
+      const el = document.getElementById('githubRepos');
+      try {
+        const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`);
+        if (!res.ok) throw new Error("GitHub API error");
+        const repos = await res.json();
+
+        el.innerHTML = repos
+          .filter(r => !r.fork)
+          .slice(0, 6)
+          .map(r => {
+            const desc = (r.description || "No description").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            const lang = r.language ? ` · ${r.language}` : "";
+            return `
+              <li>
+                <a href="${r.html_url}" target="_blank" rel="noreferrer" style="color:#a5f3fc;text-decoration:none;font-weight:800;">
+                  ${r.name}
+                </a>
+                <span style="color: var(--muted2); font-size: 12px;">${lang} · Updated ${new Date(r.updated_at).toLocaleDateString()}</span>
+                <div style="color: var(--muted); font-size: 13px; margin-top: 4px;">${desc}</div>
+              </li>
+            `;
+          })
+          .join("");
+      } catch (e) {
+        el.innerHTML = `<li>Unable to load GitHub repos right now. You can still use the Featured Projects above.</li>`;
+      }
+    }
+
+    loadGithubRepos();
+  </script>
 </body>
 </html>
