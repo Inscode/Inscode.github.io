@@ -409,6 +409,9 @@
             backdrop-filter: blur(10px);
         }
 
+        #contact {
+    padding-top: 10rem;  /* Add extra top padding just for contact section */
+}
         .cert-card:hover {
             border-color: var(--accent);
             transform: translateX(10px);
@@ -880,7 +883,7 @@
         function downloadResume() {
             // Option 1: Link to your resume file (recommended)
             // Upload your resume to the same folder as your website and use this:
-            window.location.href = 'Software_Engineer_Insaf.pdf';
+           window.open('Software_Engineer_Insaf.pdf', '_blank');
             
             // Option 2: Link to Google Drive or Dropbox
             // Replace the URL below with your actual resume link
