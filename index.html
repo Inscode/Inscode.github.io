@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insaf Ahmedh | Software Engineer: Java, Cloud and DevOps</title>
+<meta name="description" content="Software engineer in Sri Lanka building Java Spring Boot backends, Angular and React frontends, and Docker, Kubernetes and AWS delivery pipelines. Open to full-time roles.">
+<meta property="og:title" content="Insaf Ahmedh | Software Engineer">
+<meta property="og:description" content="Java Spring Boot, Angular, React, Docker, Kubernetes and AWS. Live client platforms and open-source projects.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b1b2b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231d4ed8'/%3E%3Ctext x='50' y='66' font-size='52' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='white'%3EIA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5f9;--panel:#fff;--ink:#0b1b2b;--mute:#4b5d70;--line:#d9e1ea;--acc:#1d4ed8;--acc2:#dbe6ff;--ok:#16a34a;--hot:#d97706;--sh:0 1px 2px rgba(11,27,43,.06),0 12px 32px -12px rgba(11,27,43,.18)}
+:root[data-theme=dark]{--bg:#08121d;--panel:#0f1d2c;--ink:#eaf1f8;--mute:#9db0c3;--line:#1e3146;--acc:#6ea0ff;--acc2:#162a4a;--ok:#4ade80;--hot:#fbbf24;--sh:0 12px 32px -12px rgba(0,0,0,.6)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}ul{list-style:none}button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:'Bricolage Grotesque',Inter,sans-serif;letter-spacing:-.03em;line-height:1.08}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+svg.i{width:16px;height:16px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+svg.f{fill:currentColor;stroke:none}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.35rem;border-radius:12px;font-weight:600;font-size:.92rem;border:1px solid var(--line);background:var(--panel);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:#fff}
+:root[data-theme=dark] .btn.p{color:#08121d}
+/* nav */
+header{position:sticky;top:12px;z-index:50;padding:0 16px}
+nav{max-width:1140px;margin:12px auto 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem .8rem .6rem 1.2rem;border-radius:16px;background:color-mix(in srgb,var(--panel) 82%,transparent);backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:var(--sh)}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;display:flex;align-items:center;gap:.55rem}
+.logo b{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 25%,transparent)}
+.links{display:flex;gap:.2rem}
+.links a{padding:.4rem .8rem;border-radius:9px;font-size:.88rem;color:var(--mute);font-weight:500}
+.links a:hover,.links a.on{color:var(--ink);background:var(--acc2)}
+.nr{display:flex;gap:.5rem;align-items:center}
+.ic{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);display:grid;place-items:center}
+#menu{display:none}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center;padding:72px 0 88px}
+.status{display:inline-flex;align-items:center;gap:.6rem;padding:.4rem .95rem;border-radius:99px;background:var(--panel);border:1px solid var(--line);font-size:.83rem;font-weight:500;margin-bottom:1.6rem}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+h1{font-size:clamp(2.7rem,5.6vw,4.9rem);font-weight:800;margin-bottom:1.4rem}
+h1 em{font-style:normal;color:var(--acc)}
+.lead{font-size:1.1rem;color:var(--mute);max-width:33rem;margin-bottom:2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:2.4rem}
+.stats{display:flex;gap:2.4rem;flex-wrap:wrap;padding-top:1.6rem;border-top:1px solid var(--line)}
+.stats div b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.9rem;line-height:1}
+.stats div span{font-size:.82rem;color:var(--mute)}
+.portrait{position:relative;justify-self:center;width:min(100%,430px)}
+.frame{aspect-ratio:4/5;border-radius:32px;overflow:hidden;position:relative;background:linear-gradient(160deg,var(--acc),#0b1b2b);box-shadow:var(--sh),0 0 0 8px var(--panel),0 0 0 9px var(--line)}
+.frame span{position:absolute;inset:0;display:grid;place-items:center;font:800 6rem 'Bricolage Grotesque',sans-serif;color:#ffffff88}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.term{position:absolute;left:-2.2rem;bottom:2.2rem;width:250px;padding:.9rem 1rem;border-radius:14px;background:#0b1b2b;color:#cfe0f3;font-size:.72rem;line-height:1.75;box-shadow:var(--sh);border:1px solid #1e3146}
+.term .g{color:#4ade80}.term .d{color:#7d93ab}
+.chip{position:absolute;right:-1rem;top:2rem;padding:.55rem .95rem;border-radius:12px;background:var(--panel);border:1px solid var(--line);box-shadow:var(--sh);font-size:.82rem;font-weight:600;display:flex;gap:.5rem;align-items:center}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}.rise.d2{animation-delay:.12s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.4rem;flex-wrap:wrap}
+h2{font-size:clamp(1.9rem,3.4vw,2.8rem);font-weight:800}
+.sh p{color:var(--mute);max-width:30rem}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem}
+.about p{color:var(--mute);margin-bottom:1rem}.about p b{color:var(--ink)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:1.5rem;box-shadow:var(--sh)}
+.facts li{display:flex;gap:.8rem;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.92rem;color:var(--mute)}
+.facts li:last-child{border:0}.facts svg{color:var(--acc);margin-top:.25rem}
+/* skills */
+.tiers{display:flex;gap:1.4rem;margin-bottom:1.4rem;font-size:.82rem;color:var(--mute);flex-wrap:wrap}
+.tiers span{display:flex;align-items:center;gap:.45rem}
+.dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+.t1{background:var(--acc)}.t2{background:var(--ok)}.t3{background:var(--hot)}
+.sk{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.sk .card{padding:1.3rem}.sk h3{font-size:1.05rem;margin-bottom:.9rem}
+.tg{display:flex;flex-wrap:wrap;gap:.4rem}
+.tg span{font-size:.78rem;font-weight:500;padding:.28rem .65rem;border-radius:8px;border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--bg)}
+.tg .b{border-left-color:var(--ok)}.tg .c{border-left-color:var(--hot)}
+/* projects */
+.pj{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.pj .card{display:flex;flex-direction:column;grid-column:span 2;transition:transform .2s}
+.pj .card:hover{transform:translateY(-4px)}
+.pj .w{grid-column:span 3}
+.pj h3{font-size:1.15rem;margin:.6rem 0 .5rem}
+.pj p{color:var(--mute);font-size:.9rem;flex:1;margin-bottom:1rem}
+.k{font-size:.72rem;display:inline-flex;gap:.4rem;align-items:center;color:var(--ok);font-weight:500}
+.k.o{color:var(--mute)}
+.k::before{content:'';width:7px;height:7px;border-radius:50%;background:currentColor}
+.pt{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.1rem}
+.pt span{font-size:.72rem;color:var(--mute);background:var(--bg);border:1px solid var(--line);padding:.15rem .5rem;border-radius:6px}
+.pl{display:flex;gap:.5rem;flex-wrap:wrap}
+.pl a{display:inline-flex;gap:.4rem;align-items:center;font-size:.8rem;font-weight:600;padding:.4rem .8rem;border-radius:9px;border:1px solid var(--line)}
+.pl a:hover{background:var(--acc2)}.pl a.lv{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 40%,var(--line))}
+/* experience */
+.tl{position:relative;padding-left:2rem}
+.tl::before{content:'';position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl article{position:relative;margin-bottom:1.2rem}
+.tl article::before{content:'';position:absolute;left:-2rem;top:1.7rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--acc)}
+.tl article:first-child::before{background:var(--ok);border-color:var(--ok)}
+.th{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.9rem}
+.th h3{font-size:1.2rem}.th small{color:var(--acc);font-weight:600}
+.th time{font-size:.78rem;color:var(--mute);padding:.25rem .7rem;border:1px solid var(--line);border-radius:8px;height:fit-content}
+.tl li{color:var(--mute);font-size:.92rem;padding-left:1.1rem;position:relative;margin-bottom:.35rem}
+.tl li::before{content:'';position:absolute;left:0;top:.7em;width:6px;height:2px;background:var(--acc)}
+/* courses */
+.note{font-size:.85rem;color:var(--mute);margin-bottom:1.2rem;display:flex;gap:.6rem;align-items:center}
+.cr{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cr .card{padding:1.3rem;display:flex;flex-direction:column}
+.cr small{color:var(--acc);font-weight:600;font-size:.76rem}
+.cr h3{font-size:1.02rem;margin:.35rem 0 .5rem}.cr p{font-size:.86rem;color:var(--mute);flex:1;margin-bottom:.9rem}
+.cr a{font-size:.82rem;font-weight:600;color:var(--acc);display:inline-flex;gap:.4rem;align-items:center}
+.cr a:hover{text-decoration:underline}
+/* contact */
+.ct{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.ct h2{font-size:clamp(2.2rem,4.4vw,3.6rem);margin-bottom:1rem}.ct p{color:var(--mute);margin-bottom:1.6rem;max-width:30rem}
+.rows a,.rows div{display:flex;gap:.9rem;align-items:center;padding:1rem 1.2rem;background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:.6rem;font-size:.92rem}
+.rows a:hover{border-color:var(--acc)}.rows svg{color:var(--acc)}
+footer{border-top:1px solid var(--line);padding:1.8rem 0;color:var(--mute);font-size:.84rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+@media(max-width:940px){
+.hero,.about,.ct{grid-template-columns:1fr;gap:2.5rem}.hero{padding-top:40px}.portrait{width:min(78%,360px)}
+.sk,.cr{grid-template-columns:1fr 1fr}.pj{grid-template-columns:1fr}.pj .card,.pj .w{grid-column:auto}
+.links{display:none;position:absolute;top:calc(100% + 8px);left:16px;right:16px;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:.5rem;box-shadow:var(--sh)}
+.links.open{display:flex}#menu{display:grid}.term{left:-.6rem;width:220px}.chip{right:-.4rem}}
+@media(max-width:580px){.sk,.cr{grid-template-columns:1fr}.wrap{padding:0 18px}section{padding:56px 0}.stats{gap:1.6rem}.term{bottom:1rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="gh" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.03-2.682-.103-.253-.447-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.376.202 2.394.1 2.646.64.698 1.026 1.591 1.026 2.682 0 3.841-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></symbol>
+<symbol id="li" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+<symbol id="ex" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></symbol>
+<symbol id="ml" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></symbol>
+<symbol id="dl" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+<symbol id="pn" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="ph" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.8 19.8 0 013.07 9.8 2 2 0 015 1h3a2 2 0 012 1.7c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.1L8.9 8.9a16 16 0 006.3 6.3l1.3-1.35a2 2 0 012.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.92z"/></symbol>
+<symbol id="ck" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+</defs></svg>
+
+<header><nav aria-label="Main">
+  <a href="#top" class="logo"><b></b>Insaf Ahmedh</a>
+  <div class="links" id="links">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#courses">Courses</a><a href="#contact">Contact</a>
+  </div>
+  <div class="nr">
+    <button class="ic" id="theme" aria-label="Toggle light and dark theme"><svg class="i" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg></button>
+    <a class="btn p" href="Software_Engineer_Insaf.pdf" target="_blank" rel="noopener" style="padding:.55rem 1rem"><svg class="i"><use href="#dl"/></svg>CV</a>
+    <button class="ic" id="menu" aria-label="Open menu" aria-expanded="false"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</nav></header>
+
+<main id="top" class="wrap">
+<div class="hero">
+  <div class="rise">
+    <div class="status"><i></i>Open to full-time roles, remote or on-site</div>
+    <h1>I build backends that ship, and <em>the pipelines</em> that deploy them.</h1>
+    <p class="lead">Software engineer with Java Spring Boot, Angular and React experience, plus hands-on Docker, Kubernetes and AWS. I deliver for real clients, from database schema to live deployment.</p>
+    <div class="cta">
+      <a class="btn p" href="Software_Engineer_Insaf.pdf" target="_blank" rel="noopener"><svg class="i"><use href="#dl"/></svg>Download CV</a>
+      <a class="btn" href="#projects">See my projects</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+    <div class="stats">
+      <div><b>1+ yrs</b><span>Professional experience</span></div>
+      <div><b>2</b><span>Live client platforms</span></div>
+      <div><b>8</b><span>Projects on this page</span></div>
+    </div>
+  </div>
+  <div class="portrait rise d2">
+    <div class="frame"><span aria-hidden="true">IA</span><img src="profile.png" alt="Portrait of Insaf Ahmedh" width="860" height="1075" fetchpriority="high" onerror="this.remove()"></div>
+    <div class="chip"><svg class="i" style="color:var(--ok)"><use href="#ck"/></svg>Java 21 · Spring Boot 3</div>
+    <div class="term mono"><span class="d">$</span> kubectl get pods<br><span class="g">app-api</span> &nbsp;1/1 Running<br><span class="g">prometheus</span> 1/1 Running<br><span class="g">grafana</span> &nbsp;&nbsp;1/1 Running</div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="sh"><h2>About me</h2></div>
+  <div class="about">
+    <div>
+      <p>I'm a <b>software engineer based in Sri Lanka</b> with a BSc in Computer Science from the University of Colombo School of Computing. My core is <b>Java Spring Boot</b> backends with <b>Angular and React</b> frontends.</p>
+      <p>At Aasa IT Solutions I worked on a <b>MOSIP-based government passport system</b> and a sand mining licence system, and I set up CI/CD with Jenkins, GitHub Actions and ArgoCD, with SonarQube quality gates.</p>
+      <p>Now I freelance on live platforms for a retail client, including <b>AI-powered semantic search</b>, and I'm growing into DevOps and cloud work. I'm looking for a role where I can build reliable software and own how it runs in production.</p>
+    </div>
+    <div class="card"><ul class="facts">
+      <li><svg class="i"><use href="#pn"/></svg>Colombo, Sri Lanka. Remote-friendly</li>
+      <li><svg class="i"><use href="#ck"/></svg>Freelance full-stack developer since Jan 2026</li>
+      <li><svg class="i"><use href="#ck"/></svg>Software engineer, Aasa IT Solutions (2024 to 2025)</li>
+      <li><svg class="i"><use href="#ck"/></svg>BSc Computer Science, UCSC (GPA 3.25)</li>
+    </ul></div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="sh"><h2>Skills</h2><p>Grouped by how I've used them, so you know what to expect.</p></div>
+  <div class="tiers"><span><i class="dot t1"></i>Daily use in production</span><span><i class="dot t2"></i>Hands-on in projects</span><span><i class="dot t3"></i>Learning, with course or lab practice</span></div>
+  <div class="sk" id="skg"></div>
+</section>
+
+<section id="projects">
+  <div class="sh"><h2>Projects</h2><p>Live client work first, then open-source builds across cloud, DevOps and AI.</p></div>
+  <div class="pj" id="pjg"></div>
+</section>
+
+<section id="experience">
+  <div class="sh"><h2>Experience</h2></div>
+  <div class="tl">
+    <article class="card"><div class="th"><div><h3>Independent Full-Stack Developer</h3><small>Self-employed, remote</small></div><time>Jan 2026 to present</time></div><ul>
+      <li>Built a multi-business finance platform with Angular 18, Spring Boot 3.5 and PostgreSQL: billing, stock, cheque tracking, payroll and profit and loss reports.</li>
+      <li>Shipped a production e-commerce site and POS for a retail client, with AI semantic search (Hugging Face and pgvector) and a Gemini chatbot.</li>
+      <li>Own architecture, testing and deployment, with Docker and GitHub Actions CI/CD.</li></ul></article>
+    <article class="card"><div class="th"><div><h3>Software Engineer</h3><small>Aasa IT Solutions, Dehiwala (hybrid)</small></div><time>May 2025 to Dec 2025</time></div><ul>
+      <li>Worked on a MOSIP-based passport application system: API orchestration, secure JWT flows and a React and TypeScript portal.</li>
+      <li>Built Spring Boot and NestJS services, and set up CI/CD with Jenkins, GitHub Actions and ArgoCD with SonarQube quality gates.</li>
+      <li>Designed PostgreSQL, MongoDB and MySQL schemas, and deployed Docker containers to AWS EC2 and DigitalOcean.</li></ul></article>
+    <article class="card"><div class="th"><div><h3>Software Engineering Trainee</h3><small>Aasa IT Solutions, Dehiwala (hybrid)</small></div><time>Dec 2024 to May 2025</time></div><ul>
+      <li>Built backend features with Spring Boot and Flask, and connected REST APIs to React frontends.</li>
+      <li>Configured Nginx routing, load balancing and SSL on Linux and AWS.</li>
+      <li>Implemented JWT, session and OAuth2 authentication, and contributed to a government sand mining licence system.</li></ul></article>
+  </div>
+</section>
+
+<section id="courses">
+  <div class="sh"><h2>Courses and certificates</h2><p>Completion certificates from online courses.</p></div>
+  <p class="note"><svg class="i"><use href="#ck"/></svg>These show completed training, not vendor certification exams.</p>
+  <div class="cr" id="crg"></div>
+</section>
+
+<section id="contact">
+  <div class="ct">
+    <div><h2>Let's build something reliable.</h2><p>I'm open to full-time Full Stack, Backend and Junior DevOps roles. Send me a message and I'll reply promptly.</p>
+      <div class="cta"><a class="btn p" href="mailto:insaf.ahmedh@gmail.com"><svg class="i"><use href="#ml"/></svg>Email me</a><a class="btn" href="https://www.linkedin.com/in/insaf-ahmedh/" target="_blank" rel="noopener"><svg class="i f"><use href="#li"/></svg>LinkedIn</a></div></div>
+    <div class="rows">
+      <a href="mailto:insaf.ahmedh@gmail.com"><svg class="i"><use href="#ml"/></svg>insaf.ahmedh@gmail.com</a>
+      <a href="tel:+94769025444"><svg class="i"><use href="#ph"/></svg>+94 76 902 5444</a>
+      <a href="https://github.com/Inscode" target="_blank" rel="noopener"><svg class="i f"><use href="#gh"/></svg>github.com/Inscode</a>
+      <div><svg class="i"><use href="#pn"/></svg>Colombo, Sri Lanka</div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>Insaf Ahmedh, Software Engineer</span><span>&copy; <span id="yr"></span></span></div></footer>
+
+<script>
+const G=(u,t)=>`<a href="${u}" target="_blank" rel="noopener"><svg class="i f"><use href="#gh"/></svg>${t}</a>`;
+const L=(u,t)=>`<a class="lv" href="${u}" target="_blank" rel="noopener"><svg class="i"><use href="#ex"/></svg>${t}</a>`;
+const skills=[
+["Backend",[["Java",""],["Spring Boot",""],["Spring Security",""],["Spring Data JPA",""],["REST APIs",""],["JWT and OAuth2",""],["NestJS","b"],["Node.js","b"],["Python and Flask","b"],["Microservices","b"]]],
+["Frontend",[["Angular",""],["React",""],["TypeScript",""],["JavaScript",""],["Tailwind CSS",""],["NgRx","b"],["Next.js","b"],["Angular Material","b"]]],
+["Databases",[["PostgreSQL",""],["MySQL",""],["MongoDB",""],["Flyway","b"],["pgvector","b"]]],
+["CI/CD and delivery",[["Git and GitHub",""],["GitHub Actions",""],["Jenkins",""],["ArgoCD","b"],["SonarQube",""],["Docker",""]]],
+["Cloud and Linux",[["Linux",""],["Nginx and SSL",""],["AWS EC2",""],["AWS S3","b"],["AWS RDS and Lambda","c"],["AWS EKS and ECS","c"]]],
+["Kubernetes and monitoring",[["Kubernetes","b"],["Helm","b"],["Prometheus","b"],["Grafana","b"],["Micrometer","b"],["CKA prep","c"]]],
+["AI and search",[["RAG pipelines","b"],["Gemini API","b"],["Hugging Face embeddings","b"],["Semantic search","b"]]],
+["Engineering practice",[["OOP and SOLID",""],["TDD",""],["JUnit and Mockito",""],["Agile and Scrum",""],["Debugging",""]]]];
+document.getElementById('skg').innerHTML=skills.map(([h,t])=>`<div class="card"><h3>${h}</h3><div class="tg">${t.map(([n,c])=>`<span class="${c}">${n}</span>`).join('')}</div></div>`).join('');
+const projects=[
+["Ghanim Enterprises e-commerce and POS","Live","Production store for a real retail client with Retail, Wholesale and Admin pricing, barcode POS, AI semantic search and a Gemini chatbot.",["Angular","Spring Boot 3","PostgreSQL","pgvector","Gemini","Docker"],[L("https://ghanimenterprises.lk","Live site"),G("https://github.com/Inscode/ecommerce-angular-springboot","Frontend"),G("https://github.com/Inscode/ghanim-enterprises-api","Backend")],1],
+["Multi-business finance system","Live","Finance platform with 3 user roles across 27 tables: billing, cheque lifecycle, payroll, cash reconciliation and cross-business profit and loss.",["Angular 18","Spring Boot 3.5","PostgreSQL","NgRx","Flyway","GitHub Actions"],[L("https://finance.ghanimenterprises.lk/","Live site"),G("https://github.com/Inscode/multi-business-fms","GitHub")],1],
+["AeroGuide: airline document assistant","Deployed on AWS EC2","RAG assistant that answers questions from airline PDFs with page citations: upload, chunking, embeddings, vector retrieval, then Gemini answers.",["FastAPI","React","pgvector","Hugging Face","Gemini","AWS EC2"],[G("https://github.com/Inscode/aeroguide","GitHub")]],
+["Java cloud-native observability stack","Kubernetes","Observability for a Java 21 service on Kubernetes: custom Micrometer business metrics, a Prometheus ServiceMonitor and Grafana JVM dashboards via Helm.",["Java 21","Kubernetes","Helm","Prometheus","Grafana"],[G("https://github.com/Inscode/java-k8s-observability","GitHub")]],
+["Job Tracker with AI resume advisor","Live","Kanban job tracker with stats dashboard, JWT auth and a Gemini-powered resume advisor. Deployed on Railway and Vercel.",["Spring Boot","React 18","PostgreSQL","Gemini","Docker"],[L("https://job-tracker-hazel.vercel.app/","Live demo"),G("https://github.com/Inscode/job-tracker","GitHub")]],
+["CI/CD and DevOps portfolio","GitOps","GitOps pipelines with Jenkins and ArgoCD, GitHub Actions for Node, Java and Flask, and SonarQube quality gates across every pipeline.",["Jenkins","ArgoCD","GitHub Actions","SonarQube","Docker"],[G("https://github.com/Inscode/devops-portfolio","GitHub")]],
+["AI resume screening system","AI and NLP","Resume matcher with semantic similarity scoring, keyword gap analysis and improvement suggestions.",["Java","Spring Boot","React","Python","NLP"],[G("https://github.com/Inscode/ai-resume-screening-system","GitHub")]],
+["MOSIP passport application system","Professional work","Government-scale biometric identity workflow at Aasa IT Solutions: API orchestration, secure JWT flows and a React and TypeScript portal.",["Java","MOSIP","React","TypeScript","JWT"],[]]];
+document.getElementById('pjg').innerHTML=projects.map(([t,k,d,tg,ln,live],i)=>`<div class="card ${i<2?'w':''}"><span class="k ${live?'':'o'}">${k}</span><h3>${t}</h3><p>${d}</p><div class="pt">${tg.map(x=>`<span>${x}</span>`).join('')}</div><div class="pl">${ln.join('')}</div></div>`).join('');
+const li="https://www.linkedin.com/learning/certificates/";
+const courses=[
+["Udemy","AWS Solutions Architect Associate course","Core AWS services, scalability, high availability and architecture best practice.","https://www.udemy.com/certificate/UC-6f5c0148-9018-4182-9080-02b8e011be10/"],
+["Udemy","CKA practice tests","Kubernetes administration practice for the Certified Kubernetes Administrator exam.","https://www.udemy.com/certificate/UC-4a45ea28-2f41-408a-a842-253b8b741cdd/"],
+["KodeKloud","AI-Powered DevOps","Kubernetes incident response, cloud security automation and agentic DevOps workflows.","https://learn.kodekloud.com/user/certificate/33e6178e-a5b4-4569-828c-9387d231273f"],
+["LinkedIn Learning","Docker for Developers","Docker fundamentals, containerisation and deployment workflows.",li+"347e430a9557c72bce8a106820358f0ba3de6e1f11d466babe5aaad3787f6c88"],
+["LinkedIn Learning","Microservices Foundations","Microservice concepts, bounded contexts, API design and DevOps culture.",li+"57e4b8a4f7177c986979a9d42846057095da36af68656e7f57e18be431e5f77e"],
+["LinkedIn Learning","Apache Kafka Essential Training","Topics, partitions, consumer groups and producer-consumer architecture.",li+"80250ac4dd65cb01b6b82eab3298251633b703c45964a5f25d87d61f8a7d207a"],
+["LinkedIn Learning","Java EE: Packaging and Deploying Apps","Java packaging, Docker-based deployment and cloud deployment on AWS and Azure.",li+"0602b740cb68705cd2d57168dfe6135aa9510217befabe1d89af8cd5fa87e666"]];
+document.getElementById('crg').innerHTML=courses.map(([s,t,d,u])=>`<div class="card"><small>${s}</small><h3>${t}</h3><p>${d}</p><a href="${u}" target="_blank" rel="noopener">View certificate<svg class="i"><use href="#ex"/></svg></a></div>`).join('');
+document.getElementById('yr').textContent=new Date().getFullYear();
+const root=document.documentElement;
+try{const s=localStorage.getItem('theme');if(s)root.dataset.theme=s;else if(matchMedia('(prefers-color-scheme:dark)').matches)root.dataset.theme='dark'}catch(e){}
+document.getElementById('theme').onclick=()=>{const d=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=d;try{localStorage.setItem('theme',d)}catch(e){}};
+const menu=document.getElementById('menu'),links=document.getElementById('links');
+menu.onclick=()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('open');menu.setAttribute('aria-expanded',false)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('section[id]').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
